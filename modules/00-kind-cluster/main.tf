@@ -1,7 +1,7 @@
 resource "kind_cluster" "default" {
   name           = var.name_kind
   wait_for_ready = true
-  node_image     = "kindest/node:v1.24.13"
+  node_image     = "kindest/node:${var.cluster_version}"
 
   kind_config {
     kind        = "Cluster"
@@ -37,23 +37,4 @@ resource "kind_cluster" "default" {
       role = "worker"
     }
   }
-}
-
-
-module "metrcis" {
-  source = "./modules/metrics"
-
-  depends_on = [kind_cluster.default]
-}
-
-module "ingress_nginx" {
-  source = "./modules/ingress-nginx"
-
-  depends_on = [kind_cluster.default]
-}
-
-module "sealed_secrets" {
-  source = "./modules/sealed-secrets"
-
-  depends_on = [kind_cluster.default]
 }

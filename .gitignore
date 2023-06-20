@@ -31,13 +31,16 @@ override.tf.json
 # example: *tfplan*
 
 # Ignore CLI configuration files
-.terraformrc
+**/.terraformrc
 terraform.rc
-
+**/.terraform
 *-config
 .Makefile*
 plan
-env
+.env
 .tmp
 .key
 secret/*
+
+# Terragrunt cache
+.terragrunt-cache
