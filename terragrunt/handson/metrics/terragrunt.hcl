@@ -1,5 +1,5 @@
 terraform {
-  source = "../../../modules/00-kind-cluster//."
+  source = "../../../modules/01-metrics//."
 }
 
 include {
@@ -8,5 +8,5 @@ include {
 
 inputs = {
   name_kind = "test"
-  cluster_version = "v1.24.13"
+  chat_version = "3.10.0"
 }

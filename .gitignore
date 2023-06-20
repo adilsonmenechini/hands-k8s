@@ -42,5 +42,6 @@ plan
 .key
 secret/*
 
+**/.terraform.lock.hcl
 # Terragrunt cache
 .terragrunt-cache
