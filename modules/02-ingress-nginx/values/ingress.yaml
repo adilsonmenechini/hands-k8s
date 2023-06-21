@@ -24,4 +24,4 @@ controller:
   publishService:
     enabled: false
   extraArgs:
-    publish-status-address: "localhost"
+    publish-status-address: "localshost"

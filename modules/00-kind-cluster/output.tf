@@ -1,3 +1,7 @@
+output "cluster_name" {
+  value       = kind_cluster.default.name
+}
+
 output "host" {
   value       = kind_cluster.default.endpoint
 }

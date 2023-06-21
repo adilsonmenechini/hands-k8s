@@ -1,4 +1,6 @@
-
+terraform {
+  source = "../../../modules/03-sealed-secrets//."
+}
 
 include {
   path = find_in_parent_folders()
@@ -27,9 +29,4 @@ inputs = {
   client_certificate = dependency.kind.outputs.client_certificate
   client_key = dependency.kind.outputs.client_key
   cluster_ca_certificate = dependency.kind.outputs.cluster_ca_certificate
-}
-
-terraform {
-  source = "../../../modules/01-metrics//."
-  
 }

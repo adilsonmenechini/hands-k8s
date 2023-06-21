@@ -4,16 +4,19 @@ terraform {
 
 provider "helm" {
   kubernetes {
-    config_path = "~/.kube/config"
-    config_context = var.k8s_context
+    host = var.host
+
+    client_certificate     = var.client_certificate
+    client_key             = var.client_key
+    cluster_ca_certificate = var.cluster_ca_certificate
   }
 }
 
 
 provider "kubernetes" {
-  config_path = "~/.kube/config"
-  config_context = var.k8s_context
+  host = var.host
 
+  client_certificate     = var.client_certificate
+  client_key             = var.client_key
+  cluster_ca_certificate = var.cluster_ca_certificate
 }
-
-

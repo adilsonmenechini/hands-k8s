@@ -1,4 +1,4 @@
-# Local .terraform directories
+# locals .terraform directories
 **/.terraform/*
 
 # .tfstate files
@@ -17,7 +17,7 @@ crash.*.log
 *.tfvars.json
 
 
-# Ignore override files as they are usually used to override resources locally and so
+# Ignore override files as they are usually used to override resources localsly and so
 # are not checked in
 override.tf
 override.tf.json

@@ -7,6 +7,7 @@ include {
 }
 
 inputs = {
-  name_kind = "test"
+  name_kind = "lab-gitops"
   cluster_version = "v1.24.13"
 }
+

@@ -30,6 +30,6 @@ inputs = {
 }
 
 terraform {
-  source = "../../../modules/01-metrics//."
+  source = "../../../modules/02-ingress-nginx//."
   
 }
